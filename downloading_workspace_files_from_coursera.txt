@@ -1,0 +1,22 @@
+https://learner.coursera.help/hc/en-us/articles/360004990332-Download-Jupyter-Workspace-files
+
+Launch one of your notebooks from coursera.org.
+In the top-right, click the Coursera or Jupyter logo.
+You'll see a file view page that lists all Jupyter resources in your current course. Click the New, then select Terminal to open the system command line.
+You'll see a shell prompt open. In the shell prompt, type or paste the following statements:
+# Remove the previous archive, if it exists: rm -f ~/workspace.tar.gz && rm  -f ~/work/workspace.tar.gz
+
+# Create a zipped archive of your workspace directory: tar -czf ~/workspace.tar.gz ~/work
+
+# Move the archive into the workspace directory so you can see it: mv ~/workspace.tar.gz ~/work/workspace.tar.gz
+
+Once the commands run successfully, click on the ‘Coursera’ logo again to return to the file view.
+In the file view, select workspace.tar.gz, then click Download. Your browser will download the workspace archive, which is yours to keep.
+Remove the archive file: rm ~/work/workspace.tar.gz*
+
+
+Note: If your zip file is larger than 100MB, you will need to split it up into smaller files instead and download each of them, using the following commands:
+
+tar -czf - ~/work | split --bytes=100MB - ~/workspace.tar.gz
+
+mv ~/workspace.tar.gz* ~/work/
