@@ -1,0 +1,8 @@
+create python notebook in the root directory
+
+!tar cvfz zipname.tar.gz *   to zip all files in a file called zipname.tar.gz
+
+!split -b 200m zipname.tar.gz zipname.tar.gz.part   to split the zip file into 200mb chunks in case its too large
+
+open gitbash
+cat zipname.tar.gz.part* > combined.tar.gz   to combine the split tar files back into a single file
